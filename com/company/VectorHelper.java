@@ -63,6 +63,18 @@ public class VectorHelper {
         }
     }
 
+    public ArrayList<Integer> InversVector(ArrayList<Integer> VectToInverse) {
+        int tmp;
+        int taille =VectToInverse.size()/2;
+        for(int i=0; i< taille ; i++ ){
+            tmp = VectToInverse.get(i);
+            VectToInverse.set(i,VectToInverse.get(VectToInverse.size()-1-i));
+            VectToInverse.set(VectToInverse.size()-1-i,tmp);
+        }
+        return VectToInverse;
+    }
+
+
 
 
 }
