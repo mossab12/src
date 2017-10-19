@@ -85,6 +85,17 @@ public class VectorHelper {
         System.out.println("Le maximum du vecteur est : "+max);
     }
 
+    public int Formul(int element){
+        return element*element ;
+    }
+
+    public void ApplyFormul(ArrayList<Integer> Vect){
+        int index=0;
+        for (int i: Vect) {
+            Vect.set(index,Formul(i));
+            index++;
+        }
+    }
 
 
 }
