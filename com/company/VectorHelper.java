@@ -74,6 +74,16 @@ public class VectorHelper {
         return VectToInverse;
     }
 
+    public void MaxMinVector(ArrayList<Integer> Vect) {
+        int min = Vect.get(0);
+        int max = Vect.get(Vect.size()-1);
+        for (int i: Vect) {
+            if (i>max) max=i;
+            if (i<min) min=i;
+        }
+        System.out.println("Le minimum du vecteur est : "+min);
+        System.out.println("Le maximum du vecteur est : "+max);
+    }
 
 
 
