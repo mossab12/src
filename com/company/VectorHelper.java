@@ -26,5 +26,28 @@ public class VectorHelper {
             System.out.println(Vect.get(i));
         }
     }
+    
+    public ArrayList<Integer> TriVector( ArrayList<Integer> VectToSort) {
+        boolean tab_en_ordre = false;
+        int tmp;
+        int taille = VectToSort.size();
+        while(!tab_en_ordre)
+        {
+            tab_en_ordre = true;
+            for(int i=0 ; i < taille-1 ; i++)
+            {
+                if(VectToSort.get(i) > VectToSort.get(i+1))
+                {
+                    tmp = VectToSort.get(i);
+                    VectToSort.set(i,VectToSort.get(i+1));
+                    VectToSort.set(i+1,tmp);
+                    tab_en_ordre = false;
+                }
+            }
+            taille--;
+        }
+        return VectToSort;
+    }
+
 
 }
