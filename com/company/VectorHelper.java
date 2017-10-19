@@ -26,7 +26,7 @@ public class VectorHelper {
             System.out.println(Vect.get(i));
         }
     }
-    
+
     public ArrayList<Integer> TriVector( ArrayList<Integer> VectToSort) {
         boolean tab_en_ordre = false;
         int tmp;
@@ -48,6 +48,21 @@ public class VectorHelper {
         }
         return VectToSort;
     }
+
+
+    public ArrayList<Integer> SommeVector(ArrayList<Integer> Vect1 ,ArrayList<Integer> Vect2) throws ExceptionTailleDif{
+        if (Vect1.size() != Vect2.size()) {
+            throw new ExceptionTailleDif();
+        }
+        else{
+            ArrayList<Integer> VectorRes =new ArrayList<Integer>();
+            for(int i=0; i< Vect1.size() ; i++ ){
+                VectorRes.add(Vect1.get(i)+ Vect2.get(i));
+            }
+            return VectorRes;
+        }
+    }
+
 
 
 }
