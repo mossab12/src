@@ -3,39 +3,46 @@ import java.util.Scanner;
 import java.util.*;
 import static java.lang.Integer.parseInt;
 
+//Class VectorHelper contenat les opérations a appliquer sur les vecteurs
 public class VectorHelper {
 
-
+    //Méthode de création d'un vecteur
     public ArrayList<Integer> CreatVector() {
         ArrayList<Integer> Vect = new ArrayList<Integer>();
         System.out.println("Veillez saisir la taille du vecteur:");
         Scanner sc = new Scanner(System.in);
         int taille = sc.nextInt();
         int i=0;
+        //Boucle de remplissage des élements du vecteur
         while (i < taille) {
             Scanner sc1 = new Scanner(System.in);
             System.out.println("Veuillez saisir un nombre :");
+            //Ajout de la valeur entrée aux vecteur selon l'index "i"
             Vect.add(sc1.nextInt());
             i++;
         }
         return Vect;
     }
 
+    //Méthode d'affichage des élements d'un vecteur donné
     public void ShowVector(ArrayList<Integer> Vect){
         for (int i=0 ; i< Vect.size() ; i++) {
             System.out.println(Vect.get(i));
         }
     }
 
+    //Méthode de tri d'un vecteur donné
     public ArrayList<Integer> TriVector( ArrayList<Integer> VectToSort) {
         boolean tab_en_ordre = false;
         int tmp;
         int taille = VectToSort.size();
+        //Algorithme du tri par Bulle d'un vecteur
         while(!tab_en_ordre)
         {
             tab_en_ordre = true;
             for(int i=0 ; i < taille-1 ; i++)
             {
+                //Permutation de deux élements si il ya désordre
                 if(VectToSort.get(i) > VectToSort.get(i+1))
                 {
                     tmp = VectToSort.get(i);
@@ -49,11 +56,13 @@ public class VectorHelper {
         return VectToSort;
     }
 
-
+    //Méthode de calcul de la somme de deux vecteurs en entrée
     public ArrayList<Integer> SommeVector(ArrayList<Integer> Vect1 ,ArrayList<Integer> Vect2) throws ExceptionTailleDif{
+        //Gestion de l'éxception si la taille des deux vecteurs est différentes
         if (Vect1.size() != Vect2.size()) {
             throw new ExceptionTailleDif();
         }
+        // Sinon on somme les élements des deux vecteurs un a un selon leur indice "i"
         else{
             ArrayList<Integer> VectorRes =new ArrayList<Integer>();
             for(int i=0; i< Vect1.size() ; i++ ){
@@ -63,10 +72,12 @@ public class VectorHelper {
         }
     }
 
+    //Méthode d'inversion des élements d'un vecteur donné
     public ArrayList<Integer> InversVector(ArrayList<Integer> VectToInverse) {
         int tmp;
         int taille =VectToInverse.size()/2;
         for(int i=0; i< taille ; i++ ){
+            //Permutation des élements selon l'index "i"
             tmp = VectToInverse.get(i);
             VectToInverse.set(i,VectToInverse.get(VectToInverse.size()-1-i));
             VectToInverse.set(VectToInverse.size()-1-i,tmp);
@@ -74,23 +85,30 @@ public class VectorHelper {
         return VectToInverse;
     }
 
+    //Méthode de calcul et d'affichage du minimum et maximum d'un vecteur donné
     public void MaxMinVector(ArrayList<Integer> Vect) {
+        //initialisation du min et du max
         int min = Vect.get(0);
         int max = Vect.get(Vect.size()-1);
+        //parcours des elements du vecteurs et comparaison de ses élements
         for (int i: Vect) {
             if (i>max) max=i;
             if (i<min) min=i;
         }
+        //Affichage du min et du max
         System.out.println("Le minimum du vecteur est : "+min);
         System.out.println("Le maximum du vecteur est : "+max);
     }
 
+    //Méthode retournant la formule de calcul du carée d'un nombre donnée
     public int Formul(int element){
         return element*element ;
     }
 
+    //Méthode appliquant une formule a tous les élements d'un vecteur donnée
     public void ApplyFormul(ArrayList<Integer> Vect){
         int index=0;
+        //Parcours des élements du vecteur et application de la formule du carée
         for (int i: Vect) {
             Vect.set(index,Formul(i));
             index++;
