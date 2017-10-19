@@ -1,6 +1,7 @@
 package com.company;
 import java.util.*;
 
+//Classe principale de l'application "main"
 public class Main {
 
     public static void main(String[] args) {
