@@ -1,4 +1,5 @@
 package com.company;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.*;
 
@@ -116,8 +117,9 @@ public class VectorHelper {
      */
 
     //
-    public void MaxMinVector(ArrayList<Integer> Vect) {
+    public int [] MaxMinVector(ArrayList<Integer> Vect) {
         //initialisation du min et du max
+        int [] Resultat = new int [2];
         int min = Vect.get(0);
         int max = Vect.get(Vect.size()-1);
         //parcours des elements du vecteurs et comparaison de ses élements
@@ -126,8 +128,9 @@ public class VectorHelper {
             if (i<min) min=i;
         }
         //Affichage du min et du max
-        System.out.println("Le minimum du vecteur est : "+min);
-        System.out.println("Le maximum du vecteur est : "+max);
+        Resultat[0]=min;
+        Resultat[1]=max;
+        return Resultat;
     }
 
     /**
@@ -145,13 +148,14 @@ public class VectorHelper {
      * @param Vect le vecteur.
      */
 
-    public void ApplyFormul(ArrayList<Integer> Vect){
+    public ArrayList<Integer> ApplyFormul(ArrayList<Integer> Vect){
         int index=0;
         //Parcours des élements du vecteur et application de la formule du carée
         for (int i: Vect) {
             Vect.set(index,Formul(i));
             index++;
         }
+        return Vect;
     }
 
 
