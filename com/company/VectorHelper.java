@@ -1,10 +1,16 @@
 package com.company;
 import java.util.Scanner;
 import java.util.*;
-import static java.lang.Integer.parseInt;
 
-//Class VectorHelper contenat les opérations a appliquer sur les vecteurs
+/**
+ * Class VectorHelper contenat les opérations a appliquer sur les vecteurs.
+ */
 public class VectorHelper {
+
+    /**
+     * Méthode CreatVector pour créer un nouveau vecteur.
+     * @return un vecteur.
+     */
 
     public ArrayList<Integer> CreatVector() {
         ArrayList<Integer> Vect = new ArrayList<Integer>();
@@ -23,6 +29,10 @@ public class VectorHelper {
         return Vect;
     }
 
+    /**
+     * Méthode ShowVector pour afficher tous le éléments d'un vecteur donné.
+     * @param Vect un vecteur.
+     */
 
     public void ShowVector(ArrayList<Integer> Vect){
         for (int i=0 ; i< Vect.size() ; i++) {
@@ -30,7 +40,12 @@ public class VectorHelper {
         }
     }
 
-    //Méthode de tri d'un vecteur donné
+    /**
+     * Méthode TriVector pour trier un vecteur donné.
+     * @param VectToSort le vecteur qu'on veut trier.
+     * @return le vecteur aprés le tri.
+     */
+
     public ArrayList<Integer> TriVector( ArrayList<Integer> VectToSort) {
         boolean tab_en_ordre = false;
         int tmp;
@@ -55,7 +70,14 @@ public class VectorHelper {
         return VectToSort;
     }
 
-    //Méthode de calcul de la somme de deux vecteurs en entrée
+    /**
+     * Méthode SommeVector pour calculer la somme de deux vecteurs en entrée.
+     * @param Vect1 le premier vecteur.
+     * @param Vect2 le deuxieme vecteur.
+     * @return le vecteur résultat.
+     * @throws ExceptionTailleDif
+     */
+
     public ArrayList<Integer> SommeVector(ArrayList<Integer> Vect1 ,ArrayList<Integer> Vect2) throws ExceptionTailleDif{
         //Gestion de l'éxception si la taille des deux vecteurs est différentes
         if (Vect1.size() != Vect2.size()) {
@@ -71,7 +93,12 @@ public class VectorHelper {
         }
     }
 
-    //Méthode d'inversion des élements d'un vecteur donné
+    /**
+     * Méthode InversVector pour faire l'inversion des élements d'un vecteur donné
+     * @param VectToInverse le vecteur à inverser.
+     * @return
+     */
+
     public ArrayList<Integer> InversVector(ArrayList<Integer> VectToInverse) {
         int tmp;
         int taille =VectToInverse.size()/2;
@@ -84,7 +111,12 @@ public class VectorHelper {
         return VectToInverse;
     }
 
-    //Méthode de calcul et d'affichage du minimum et maximum d'un vecteur donné
+    /**
+     * Méthode MaxMinVector pour faire le calcul et l'affichage du minimum et du maximum d'un vecteur donné.
+     * @param Vect le vecteur en entrée.
+     */
+
+    //
     public void MaxMinVector(ArrayList<Integer> Vect) {
         //initialisation du min et du max
         int min = Vect.get(0);
@@ -99,12 +131,21 @@ public class VectorHelper {
         System.out.println("Le maximum du vecteur est : "+max);
     }
 
-    //Méthode retournant la formule de calcul du carée d'un nombre donnée
+    /**
+     * Méthode retournant la formule de calcul du carée d'un nombre donné.
+     * @param element un entier.
+     * @return
+     */
+
     public int Formul(int element){
         return element*element ;
     }
 
-    //Méthode appliquant une formule a tous les élements d'un vecteur donnée
+    /**
+     * Méthode appliquant une formule à tous les élements d'un vecteur donné.
+     * @param Vect le vecteur.
+     */
+
     public void ApplyFormul(ArrayList<Integer> Vect){
         int index=0;
         //Parcours des élements du vecteur et application de la formule du carée
