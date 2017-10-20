@@ -5,7 +5,10 @@ import static java.lang.Integer.parseInt;
 
 public class VectorHelper {
 
-
+    /**
+     * methode pour creer un tableau .
+     * @return
+     */
     public ArrayList<Integer> CreatVector() {
         ArrayList<Integer> Vect = new ArrayList<Integer>();
         System.out.println("Veillez saisir la taille du vecteur:");
@@ -20,6 +23,11 @@ public class VectorHelper {
         }
         return Vect;
     }
+
+    /**
+     *
+     * @param Vect
+     */
 
     public void ShowVector(ArrayList<Integer> Vect){
         for (int i=0 ; i< Vect.size() ; i++) {
