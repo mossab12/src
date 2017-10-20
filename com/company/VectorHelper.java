@@ -6,9 +6,7 @@ import java.util.*;
  * Class VectorHelper contenat les opérations a appliquer sur les vecteurs.
  */
 public class VectorHelper {
-// commentaire pour montrer l'utilisation de Github.
     /**
-     *
      * Méthode CreatVector pour créer un nouveau vecteur.
      * @return un vecteur.
      */
