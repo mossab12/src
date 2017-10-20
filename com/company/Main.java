@@ -10,15 +10,17 @@ public class Main {
         VectorHelper v= new VectorHelper();
         ArrayList<Integer> a = new ArrayList<Integer>();
         int choice;
-        while (true){
+        boolean bool = true;
+        while (bool == true ){
             System.out.println("Veillez donner le numéro de l'une des opérations suivantes: ");
             System.out.println("1.Création d'un vecteur");
             System.out.println("2.Affichage des élements d'un vecteur");
-            System.out.println("3.Trie d'un vecteur");
+            System.out.println("3.Tri d'un vecteur");
             System.out.println("4.Calcul de la somme de deux vecteurs");
             System.out.println("5.Inversion des élements d'un vecteur");
             System.out.println("6.Obtention simultané du minimum et du maximum d'un vecteur");
             System.out.println("7.Application de la formule (calcul du carée) aux élements d'un vecteur");
+            System.out.println("8.Quitter");
             Scanner sc = new Scanner(System.in);
             choice = sc.nextInt();
             switch (choice){
@@ -72,6 +74,9 @@ public class Main {
                         v.ApplyFormul(a);
                         System.out.println("Effectué..la formule a été appliqué a tous les élements du vecteur!");
                     }
+                    break;
+                case 8:
+                    bool = false;
                     break;
                 default:
                     System.out.println("Numéro éronée veillez réessayer !");
