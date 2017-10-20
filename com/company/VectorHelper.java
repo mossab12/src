@@ -6,11 +6,6 @@ import static java.lang.Integer.parseInt;
 //Class VectorHelper contenat les opérations a appliquer sur les vecteurs
 public class VectorHelper {
 
-<<<<<<< HEAD
-
-=======
-    //Méthode de création d'un vecteur
->>>>>>> bd529d4f97a89f6bdd3b1a0b38ed527705c14871
     public ArrayList<Integer> CreatVector() {
         ArrayList<Integer> Vect = new ArrayList<Integer>();
         System.out.println("Veillez saisir la taille du vecteur:");
@@ -28,12 +23,7 @@ public class VectorHelper {
         return Vect;
     }
 
-<<<<<<< HEAD
 
-
-=======
-    //Méthode d'affichage des élements d'un vecteur donné
->>>>>>> bd529d4f97a89f6bdd3b1a0b38ed527705c14871
     public void ShowVector(ArrayList<Integer> Vect){
         for (int i=0 ; i< Vect.size() ; i++) {
             System.out.println(Vect.get(i));
