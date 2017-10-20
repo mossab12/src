@@ -64,7 +64,7 @@ public class Main {
                     if (a.size()==0) System.out.println("Vecteur vide veillez le créer d'abord et réessayer");
                     else {
                         int [] res = v.MaxMinVector(a);
-                        System.out.println("Effectué..la recherche du min et du max est réussite!");
+                        System.out.println("la recherche du min et du max est réussite :");
                         System.out.println("Le minimum du vecteur est : "+res[0]);
                         System.out.println("Le maximum du vecteur est : "+res[1]);
                     }
