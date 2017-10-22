@@ -1,18 +1,14 @@
 package com.company;
 
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by mac on 10/20/17.
- */
-class VectorHelperTest {
+public class VectorHelperTest {
     @Test
-    void triVector() {
+    public void triVector() throws Exception {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(1);
@@ -26,7 +22,7 @@ class VectorHelperTest {
     }
 
     @Test
-    void sommeVector() throws ExceptionTailleDif {
+    public void sommeVector() {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual1 = new ArrayList<Integer>();
         ArrayList<Integer> actual2 = new ArrayList<Integer>();
@@ -37,12 +33,16 @@ class VectorHelperTest {
         actual1.add(1); actual2.add(7);
         actual1.add(7); actual2.add(5);
         VectorHelper V = new VectorHelper();
-        Assertions.assertEquals(expected,V.SommeVector(actual1,actual2));
+        try {
+            Assertions.assertEquals(expected,V.SommeVector(actual1,actual2));
+        } catch (ExceptionTailleDif exceptionTailleDif) {
+             exceptionTailleDif.printStackTrace();
+        }
 
     }
 
     @Test
-    void inversVector() {
+    public void inversVector() throws Exception {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(1);
@@ -56,7 +56,7 @@ class VectorHelperTest {
     }
 
     @Test
-    void maxMinVector() {
+    public void maxMinVector() throws Exception {
         int [] expected = {1,6};
         ArrayList<Integer> actual = new ArrayList<Integer>();
         actual.add(5);
@@ -68,7 +68,7 @@ class VectorHelperTest {
     }
 
     @Test
-    void applyFormul() {
+    public void applyFormul() throws Exception {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(49);
