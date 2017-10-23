@@ -41,6 +41,17 @@ public class VectorHelperTest {
 
     }
 
+    @Test(expected = ExceptionTailleDif.class)
+    public void ExceptionTailleDif() throws ExceptionTailleDif {
+        VectorHelper V = new VectorHelper();
+        ArrayList<Integer> actual1 = new ArrayList<Integer>();
+        ArrayList<Integer> actual2 = new ArrayList<Integer>();
+        actual1.add(12);
+        actual2.add(2);
+        actual2.add(126);
+        V.SommeVector(actual1,actual2);
+    }
+
     @Test
     public void inversVector() throws Exception {
         ArrayList<Integer> expected = new ArrayList<Integer>();
