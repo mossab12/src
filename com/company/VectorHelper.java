@@ -4,11 +4,11 @@ import java.util.Scanner;
 import java.util.*;
 
 /**
- * Class VectorHelper contenat les opérations a appliquer sur les vecteurs.
+ * Class VectorHelper contenat les operations a appliquer sur les vecteurs.
  */
 public class VectorHelper {
     /**
-     * Méthode CreatVector pour créer un nouveau vecteur.
+     * Methode CreatVector pour creer un nouveau vecteur.
      * @return un vecteur.
      */
 
@@ -18,11 +18,11 @@ public class VectorHelper {
         Scanner sc = new Scanner(System.in);
         int taille = sc.nextInt();
         int i=0;
-        //Boucle de remplissage des élements du vecteur
+        //Boucle de remplissage des elements du vecteur
         while (i < taille) {
             Scanner sc1 = new Scanner(System.in);
             System.out.println("Veuillez saisir un nombre :");
-            //Ajout de la valeur entrée aux vecteur selon l'index "i"
+            //Ajout de la valeur entree aux vecteur selon l'index "i"
             Vect.add(sc1.nextInt());
             i++;
         }
@@ -30,7 +30,7 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode ShowVector pour afficher tous le éléments d'un vecteur donné.
+     * Methode ShowVector pour afficher tous le elements d'un vecteur donne.
      * @param Vect un vecteur.
      */
 
@@ -41,9 +41,9 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode TriVector pour trier un vecteur donné.
+     * Methode TriVector pour trier un vecteur donne.
      * @param VectToSort le vecteur qu'on veut trier.
-     * @return le vecteur aprés le tri.
+     * @return le vecteur apres le tri.
      */
 
     public ArrayList<Integer> TriVector( ArrayList<Integer> VectToSort) {
@@ -56,7 +56,7 @@ public class VectorHelper {
             tab_en_ordre = true;
             for(int i=0 ; i < taille-1 ; i++)
             {
-                //Permutation de deux élements si il ya désordre
+                //Permutation de deux elements si il ya desordre
                 if(VectToSort.get(i) > VectToSort.get(i+1))
                 {
                     tmp = VectToSort.get(i);
@@ -71,19 +71,19 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode SommeVector pour calculer la somme de deux vecteurs en entrée.
+     * Methode SommeVector pour calculer la somme de deux vecteurs en entree.
      * @param Vect1 le premier vecteur.
      * @param Vect2 le deuxieme vecteur.
-     * @return le vecteur résultat.
+     * @return le vecteur resultat.
      * @throws ExceptionTailleDif
      */
 
     public ArrayList<Integer> SommeVector(ArrayList<Integer> Vect1 ,ArrayList<Integer> Vect2) throws ExceptionTailleDif{
-        //Gestion de l'éxception si la taille des deux vecteurs est différentes
+        //Gestion de l'exception si la taille des deux vecteurs est differentes
         if (Vect1.size() != Vect2.size()) {
             throw new ExceptionTailleDif();
         }
-        // Sinon on somme les élements des deux vecteurs un a un selon leur indice "i"
+        // Sinon on somme les elements des deux vecteurs un a un selon leur indice "i"
         else{
             ArrayList<Integer> VectorRes =new ArrayList<Integer>();
             for(int i=0; i< Vect1.size() ; i++ ){
@@ -94,8 +94,8 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode InversVector pour faire l'inversion des élements d'un vecteur donné
-     * @param VectToInverse le vecteur à inverser.
+     * Methode InversVector pour faire l'inversion des elements d'un vecteur donne
+     * @param VectToInverse le vecteur a inverser.
      * @return
      */
 
@@ -103,7 +103,7 @@ public class VectorHelper {
         int tmp;
         int taille =VectToInverse.size()/2;
         for(int i=0; i< taille ; i++ ){
-            //Permutation des élements selon l'index "i"
+            //Permutation des elements selon l'index "i"
             tmp = VectToInverse.get(i);
             VectToInverse.set(i,VectToInverse.get(VectToInverse.size()-1-i));
             VectToInverse.set(VectToInverse.size()-1-i,tmp);
@@ -112,8 +112,8 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode MaxMinVector pour faire le calcul et l'affichage du minimum et du maximum d'un vecteur donné.
-     * @param Vect le vecteur en entrée.
+     * Methode MaxMinVector pour faire le calcul et l'affichage du minimum et du maximum d'un vecteur donne.
+     * @param Vect le vecteur en entree.
      */
 
     //
@@ -122,7 +122,7 @@ public class VectorHelper {
         int [] Resultat = new int [2];
         int min = Vect.get(0);
         int max = Vect.get(Vect.size()-1);
-        //parcours des elements du vecteurs et comparaison de ses élements
+        //parcours des elements du vecteurs et comparaison de ses elements
         for (int i: Vect) {
             if (i>max) max=i;
             if (i<min) min=i;
@@ -134,7 +134,7 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode retournant la formule de calcul du carée d'un nombre donné.
+     * Methode retournant la formule de calcul du caree d'un nombre donne.
      * @param element un entier.
      * @return
      */
@@ -144,13 +144,13 @@ public class VectorHelper {
     }
 
     /**
-     * Méthode appliquant une formule à tous les élements d'un vecteur donné.
+     * Methode appliquant une formule a tous les elements d'un vecteur donne.
      * @param Vect le vecteur.
      */
 
     public ArrayList<Integer> ApplyFormul(ArrayList<Integer> Vect){
         int index=0;
-        //Parcours des élements du vecteur et application de la formule du carée
+        //Parcours des elements du vecteur et application de la formule du caree
         for (int i: Vect) {
             Vect.set(index,Formul(i));
             index++;
