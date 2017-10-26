@@ -5,6 +5,13 @@ import java.util.*;
 
 /**
  * Class VectorHelper contenat les operations a appliquer sur les vecteurs.
+ *
+ * Exemple :
+ * - VectorHelper V = new VectorHelper();
+ * - ArrayList<Integer> A = V.CreatVector(); // [1,6,4]
+ * - A.ShowVector(); // [1,6,4]
+ * - A.TriVector(); // [1,4,6]
+ * - A.InversVector(); // [6,4,1]
  */
 public class VectorHelper {
     /**
