@@ -22,7 +22,7 @@ public class VectorHelperTest {
     }
 
     @Test
-    public void sommeVector() {
+    public void sommeVector() throws ExceptionTailleDif {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual1 = new ArrayList<Integer>();
         ArrayList<Integer> actual2 = new ArrayList<Integer>();
@@ -33,11 +33,7 @@ public class VectorHelperTest {
         actual1.add(1); actual2.add(7);
         actual1.add(7); actual2.add(5);
         VectorHelper V = new VectorHelper();
-        try {
-            Assertions.assertEquals(expected,V.SommeVector(actual1,actual2));
-        } catch (ExceptionTailleDif exceptionTailleDif) {
-             exceptionTailleDif.printStackTrace();
-        }
+        Assertions.assertEquals(expected,V.SommeVector(actual1,actual2));
 
     }
 
