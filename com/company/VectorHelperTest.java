@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class VectorHelperTest {
     @Test
-    public void triVector() throws Exception {
+    public void triVector() {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(1);
@@ -49,7 +49,7 @@ public class VectorHelperTest {
     }
 
     @Test
-    public void inversVector() throws Exception {
+    public void inversVector()  {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(1);
@@ -63,7 +63,7 @@ public class VectorHelperTest {
     }
 
     @Test
-    public void maxMinVector() throws Exception {
+    public void maxMinVector()  {
         int [] expected = {1,6};
         ArrayList<Integer> actual = new ArrayList<Integer>();
         actual.add(5);
@@ -75,7 +75,7 @@ public class VectorHelperTest {
     }
 
     @Test
-    public void applyFormul() throws Exception {
+    public void applyFormul() {
         ArrayList<Integer> expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = new ArrayList<Integer>();
         expected.add(49);
