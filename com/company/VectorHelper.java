@@ -96,7 +96,7 @@ public class VectorHelper {
     /**
      * Methode InversVector pour faire l'inversion des elements d'un vecteur donne
      * @param VectToInverse le vecteur a inverser.
-     * @return
+     * @return le vecteur inverse
      */
 
     public ArrayList<Integer> InversVector(ArrayList<Integer> VectToInverse) {
@@ -136,7 +136,7 @@ public class VectorHelper {
     /**
      * Methode retournant la formule de calcul du caree d'un nombre donne.
      * @param element un entier.
-     * @return
+     * @return un tableau de taille 2, le premier element c'est le min et le deuxieme le max.
      */
 
     public int Formul(int element){
